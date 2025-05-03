@@ -1,0 +1,30 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+
+  "formatter": {
+    "useEditorconfig": true
+  },
+
+  "organizeImports": {
+    "enabled": true
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "correctness": {
+        "noUnusedImports": "error"
+      },
+      "performance": {
+        "useTopLevelRegex": "error"
+      }
+    }
+  },
+  "files": {
+    "ignore": ["package.json"]
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git"
+  }
+}
