@@ -15,6 +15,7 @@
 	},
 	"dependencies": {
 		"@vscode/ripgrep": "1.15.11",
+		"fast-glob": "3.3.3",
 		"node-llama-cpp": "3.7.0"
 	},
 	"devDependencies": {

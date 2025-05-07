@@ -2,9 +2,10 @@ import { spawnSync } from "node:child_process";
 import { rgPath } from "@vscode/ripgrep";
 import { defineChatSessionFunction } from "node-llama-cpp";
 
-export const ripgrep = defineChatSessionFunction({
+export const grep = defineChatSessionFunction({
 	description: `
     - Find files in the current directory that match a given regular expression.
+		- Does not find files by their name, only by their content
     - Returns a string array of file paths.
   `,
 	params: {
@@ -15,7 +16,7 @@ export const ripgrep = defineChatSessionFunction({
 				description: `
           - The regular expression pattern to search for. 
           - Don't worry about escaping the pattern
-          - Don't worry aboutleading or trailing slashes.
+          - Don't worry about leading or trailing slashes.
         `,
 			},
 			include: {
